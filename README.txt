@@ -2,42 +2,41 @@
 fuzzydate
 =========
 
-Towel Stuff provides such and such and so and so. You might find
-it most useful for tasks involving <x> and also <y>. Typical usage
-often looks like this::
+fuzzydate is a python date/time parsing library.
 
-    #!/usr/bin/env python
+* tolerant of surrounding cruft (eg "Posted on jan 1st, 2010 at 8pm")
 
-    from towelstuff import location
-    from towelstuff import utils
+* handles common timezone abbreviations (BST, CET etc...)
 
-    if utils.has_towel():
-        print "Your towel is located:", location.where_is_my_towel()
-
-(Note the double-colon and 4-space indent formatting above.)
-
-Paragraphs are separated by blank lines. *Italics*, **bold**,
-and ``monospace`` look like this.
+* good at publication dates on web pages (eg news articles, blog posts)
 
 
-A Section
-=========
+Example interactive usage::
 
-Lists look like this:
+    >>> import fuzzydate
+    >>> test_dt = 'Tuesday October 14 2008 00.01 BST'
+    >>> fz = fuzzydate.parse_datetime(test_dt)
 
-* First
+fz is a fuzzydate object where missing fields can be None (eg there are no seconds in this example)
 
-* Second. Can be multiple lines
-  but must be indented properly.
+    >>> print fz
+    2008-10-14 0:1:None BST
 
-A Sub-Section
--------------
+convert it to a python datetime:
 
-Numbered lists look like you'd expect:
+    >>> fz.datetime()
+    datetime.datetime(2008, 10, 13, 23, 1)
 
-1. hi there
+parse_date() and parse_time() also return a span which indicates which part of the string was matched:
 
-2. must be going
+    >>> fz,span = fuzzydate.parse_date(test_dt)
+    >>> span
+    (0, 23)
+    >>> fz,span = fuzzydate.parse_time(test_dt)
+    >>> span
+    (24, 33)
 
-Urls are http://like.this and links can be
-written `like this <http://www.example.com/foo/bar>`_.
+Why not dateutil?
+* TODO
+
+
