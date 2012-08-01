@@ -1,0 +1,138 @@
+ACDT,UTC+10:30,Australian Central Daylight Time,0
+ACST,UTC+09:30,Australian Central Standard Time,0
+ACT,UTC+08,ASEAN Common Time,0
+ADT,UTC-03,Atlantic Daylight Time,0
+AEDT,UTC+11,Australian Eastern Daylight Time,0
+AEST,UTC+10,Australian Eastern Standard Time,0
+AFT,UTC+04:30,Afghanistan Time,0
+AKDT,UTC-08,Alaska Daylight Time,0
+AKST,UTC-09,Alaska Standard Time,0
+AMST,UTC+05,Armenia Summer Time,0
+AMT,UTC+04,Armenia Time,0
+ART,UTC-03,Argentina Time,0
+AST,UTC+03,"Arab Standard Time (Kuwait, Riyadh)",0
+AST,UTC+04,"Arabian Standard Time (Abu Dhabi, Muscat)",0
+AST,UTC+03,Arabic Standard Time (Baghdad),0
+AST,UTC-04,Atlantic Standard Time,0
+AWDT,UTC+09,Australian Western Daylight Time,0
+AWST,UTC+08,Australian Western Standard Time,0
+AZOST,UTC-01,Azores Standard Time,0
+AZT,UTC+04,Azerbaijan Time,0
+BDT,UTC+08,Brunei Time,0
+BIOT,UTC+06,British Indian Ocean Time,0
+BIT,UTC-12,Baker Island Time,0
+BOT,UTC-04,Bolivia Time,0
+BRT,UTC-03,Brasilia Time,0
+BST,UTC+06,Bangladesh Standard Time,0
+BST,UTC+01,British Summer Time (British Standard Time from Feb 1968 to Oct 1971),1
+BTT,UTC+06,Bhutan Time,0
+CAT,UTC+02,Central Africa Time,0
+CCT,UTC+06:30,Cocos Islands Time,0
+CDT,UTC-05,Central Daylight Time (North America),0
+CEDT,UTC+02,Central European Daylight Time,0
+CEST,UTC+02,Central European Summer Time (Cf. HAEC),0
+CET,UTC+01,Central European Time,0
+CHADT,UTC+13:45,Chatham Daylight Time,0
+CHAST,UTC+12:45,Chatham Standard Time,0
+CIST,UTC-08,Clipperton Island Standard Time,0
+CKT,UTC-10,Cook Island Time,0
+CLST,UTC-03,Chile Summer Time,0
+CLT,UTC-04,Chile Standard Time,0
+COST,UTC-04,Colombia Summer Time,0
+COT,UTC-05,Colombia Time,0
+CST,UTC-06,Central Standard Time (North America),2
+CST,UTC+08,China Standard Time,0
+CST,UTC+09:30,Central Standard Time (Australia),1
+CT,UTC+08,China Time,0
+CVT,UTC-01,Cape Verde Time,0
+CXT,UTC+07,Christmas Island Time,0
+CHST,UTC+10,Chamorro Standard Time,0
+DFT,UTC+01,AIX specific equivalent of Central European Time,0
+EAST,UTC-06,Easter Island Standard Time,0
+EAT,UTC+03,East Africa Time,0
+ECT,UTC-04,Eastern Caribbean Time (does not recognise DST),0
+ECT,UTC-05,Ecuador Time,0
+EDT,UTC-04,Eastern Daylight Time (North America),0
+EEDT,UTC+03,Eastern European Daylight Time,0
+EEST,UTC+03,Eastern European Summer Time,0
+EET,UTC+02,Eastern European Time,0
+EST,UTC-05,Eastern Standard Time (North America),0
+FET,UTC+03,Further-eastern_European_Time,0
+FJT,UTC+12,Fiji Time,0
+FKST,UTC-03,Falkland Islands Summer Time,0
+FKT,UTC-04,Falkland Islands Time,0
+GALT,UTC-06,Galapagos Time,0
+GET,UTC+04,Georgia Standard Time,0
+GFT,UTC-03,French Guiana Time,0
+GILT,UTC+12,Gilbert Island Time,0
+GIT,UTC-09,Gambier Island Time,0
+GMT,UTC,Greenwich Mean Time,0
+GST,UTC-02,South Georgia and the South Sandwich Islands,0
+GST,UTC+04,Gulf Standard Time,0
+GYT,UTC-04,Guyana Time,0
+HADT,UTC-09,Hawaii-Aleutian Daylight Time,0
+HAEC,UTC+02,Heure Avancée d'Europe Centrale francised name for CEST,0
+HAST,UTC-10,Hawaii-Aleutian Standard Time,0
+HKT,UTC+08,Hong Kong Time,0
+HMT,UTC+05,Heard and McDonald Islands Time,0
+HST,UTC-10,Hawaii Standard Time,0
+ICT,UTC+07,Indochina Time,0
+IDT,UTC+03,Israeli Daylight Time,0
+IRKT,UTC+08,Irkutsk Time,0
+IRST,UTC+03:30,Iran Standard Time,0
+IST,UTC+05:30,Indian Standard Time,0
+IST,UTC+01,Irish Summer Time,0
+IST,UTC+02,Israel Standard Time,0
+JST,UTC+09,Japan Standard Time,0
+KRAT,UTC+07,Krasnoyarsk Time,0
+KST,UTC+09,Korea Standard Time,0
+LHST,UTC+10:30,Lord Howe Standard Time,0
+LINT,UTC+14,Line Islands Time,0
+MAGT,UTC+11,Magadan Time,0
+MDT,UTC-06,Mountain Daylight Time (North America),0
+MET,UTC+01,Middle European Time Same zone as CET,0
+MEST,UTC+02,Middle European Saving Time Same zone as CEST,0
+MIT,UTC-09:30,Marquesas Islands Time,0
+MSK,UTC+04,Moscow Time,0
+MST,UTC+08,Malaysian Standard Time,0
+MST,UTC-07,Mountain Standard Time (North America),0
+MST,UTC+06:30,Myanmar Standard Time,0
+MUT,UTC+04,Mauritius Time,0
+MYT,UTC+08,Malaysia Time,0
+NDT,UTC-02:30,Newfoundland Daylight Time,0
+NFT,UTC+11:30,Norfolk Time[1],0
+NPT,UTC+05:45,Nepal Time,0
+NST,UTC-03:30,Newfoundland Standard Time,0
+NT,UTC-03:30,Newfoundland Time,0
+NZDT,UTC+13,New Zealand Daylight Time,0
+NZST,UTC+12,New Zealand Standard Time,0
+OMST,UTC+06,Omsk Time,0
+PDT,UTC-07,Pacific Daylight Time (North America),0
+PETT,UTC+12,Kamchatka Time,0
+PHOT,UTC+13,Phoenix Island Time,0
+PKT,UTC+05,Pakistan Standard Time,0
+PST,UTC-08,Pacific Standard Time (North America),0
+PST,UTC+08,Philippine Standard Time,0
+RET,UTC+04,Réunion Time,0
+SAMT,UTC+04,Samara Time,0
+SAST,UTC+02,South African Standard Time,0
+SBT,UTC+11,Solomon Islands Time,0
+SCT,UTC+04,Seychelles Time,0
+SGT,UTC+08,Singapore Time,0
+SLT,UTC+05:30,Sri Lanka Time,0
+SST,UTC-11,Samoa Standard Time,0
+SST,UTC+08,Singapore Standard Time,0
+TAHT,UTC-10,Tahiti Time,0
+THA,UTC+07,Thailand Standard Time,0
+UTC,UTC,Coordinated Universal Time,0
+UYST,UTC-02,Uruguay Summer Time,0
+UYT,UTC-03,Uruguay Standard Time,0
+VET,UTC-04:30,Venezuelan Standard Time,0
+VLAT,UTC+10,Vladivostok Time,0
+WAT,UTC+01,West Africa Time,0
+WEDT,UTC+01,Western European Daylight Time,0
+WEST,UTC+01,Western European Summer Time,0
+WET,UTC,Western European Time,0
+WST,UTC+08,Western Standard Time,0
+YAKT,UTC+09,Yakutsk Time,0
+YEKT,UTC+05,Yekaterinburg Time,0
