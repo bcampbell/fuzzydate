@@ -7,6 +7,7 @@ setup(
     author='Ben Campbell',
     author_email='ben@scumways.com',
     packages=['fuzzydate', 'fuzzydate.test'],
+    include_package_data = True,
     scripts=[],
     url='http://pypi.python.org/pypi/fuzzydate/',
     license='LICENSE.txt',

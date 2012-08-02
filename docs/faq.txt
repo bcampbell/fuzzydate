@@ -1,0 +1,37 @@
+fuzzydate FAQ
+=============
+
+Why yet another date/time parsing library?
+-------------------------------------------
+
+I wanted to extract dates and times from articles on the web. It's a mess out
+there. I couldn't get dateutil et al to do what I wanted.
+
+Problems I had with dateutil:
+
+* timezone parsing depended too much on /usr/share/zoneinfo, which
+  varied too much between machines (ie it'd work fine on my development
+  machine then die horribly on the live server)
+
+* date/time parsing didn't cover all the formats I found in the wild
+
+* date/time parsing didn't indicated which parts of the string had been
+  matched (I wanted to be able to remove the date/time from the text)
+
+None of these are unsurmountable, but in the short term it was easier to
+write my own parsing package. 
+
+
+TODO
+----
+
+* better timezone handling (should just bite the bullet and implement
+  my own tzinfo class
+
+* properly-defined error handling - should the conversion functions on
+  fuzzydate raise exceptions or return None?
+
+* allow user to pass in country codes as a context hint (eg 'bd' would
+  hint that you're more interested in Bangladesh Standard Time than
+  British Summer Time)
+
