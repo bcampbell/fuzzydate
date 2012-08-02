@@ -18,6 +18,8 @@ class fuzzydate:
         self.microsecond=microsecond
         self.tzname=tzname
 
+
+
     def empty_date(self):
         return self.year is None and self.month is None and self.day is None
 
@@ -27,41 +29,55 @@ class fuzzydate:
     def empty(self):
         return self.empty_date() and self.empty_time()
 
-    def date(self):
-        assert(self.year is not None and self.month is not None and self.day is not None)
-        return datetime.date(self.year, self.month, self.day)
+    def date(self, filler=None):
+        if filler is not None:
+            fz = fuzzydate.merge(filler,self)
+        else:
+            fz = self
 
-    def time(self):
-        assert(self.hour is not None and self.minute is not None)
-        # allow 0 for missing sec/us
-        second = self.second if self.second is not None else 0
-        microsecond = self.microsecond if self.microsecond is not None else 0
+        assert fz.year is not None
+        assert fz.month is not None
+        assert fz.day is not None
 
-        # TODO: this ignore timezone, if any
-        return datetime.time(self.hour, self.minute, second, microsecond)
+        return datetime.date(fz.year, fz.month, fz.day)
 
-    def datetime(self):
-        if self.year is None:
-            return None
+    def time(self, filler=None):
+        if filler is not None:
+            fz = fuzzydate.merge(filler,self)
+        else:
+            fz = self
+        # TODO: TIMEZONES?
+        return datetime.time(fz.hour, fz.minute, fz.second, fz.microsecond)
 
-        dt = datetime.datetime.combine(self.date(), self.time())
-        if self.tzname is not None:
+
+    def datetime(self, filler=None):
+
+        if filler is not None:
+            fz = fuzzydate.merge(filler,self)
+        else:
+            fz = self
+
+        dt = datetime.datetime.combine(fz.date(), fz.time())
+        if fz.tzname is not None:
             # convert to utc
-            delta = tzabbr.abbr_to_delta(self.tzname)
+            delta = tzabbr.abbr_to_delta(fz.tzname)
             if delta is None:   # TODO: Think this through properly
                 return None
             dt -= delta
         return dt
 
+
     def __repr__(self):
-        return "%s-%s-%s %s:%s:%s %s" %(self.year,self.month,self.day, self.hour,self.minute, self.second, self.tzname)
+        return "fuzzydate(year=%s, month=%s, day=%s, hour=%s, minute=%s,second=%s, microsecond=%s, tzname=%s)" %(self.year,self.month,self.day, self.hour,self.minute, self.second, self.microsecond, self.tzname)
+
+    def __eq__(self, other):
+        return self.__dict__ == other.__dict__
 
     @classmethod
-    def combine(cls, *args):
+    def merge(cls, *args):
         """ merge fuzzydates together
 
-        The first valid value encountered for each field will be used,
-        subsequent values for that field will be ignored.
+        Later args overwrite earlier ones.
         """
         fd = fuzzydate()
         for a in args:
@@ -283,7 +299,10 @@ def parse_time(s):
             if second<0 or second>59:
                 continue
 
-        tzname = g.get('tz', None)
+        tzname = g.get('tz',None)
+        if tzname is not None:
+            if tzabbr.abbr_to_delta(tzname) is None:
+                continue    # not a recognised TZ
 
         if hour is not None or min is not None or sec is not None:
             return (fuzzydate(hour=hour,minute=minute,second=second,microsecond=microsecond,tzname=tzname),m.span())
@@ -304,8 +323,7 @@ def parse_datetime(s):
 #        # just to make sure date doesn't get picked up again as time...
 #        s = s[:datespan[0]] + s[datespan[1]:]
 
-    fd = fuzzydate.combine(date,time)
-#    print "%s -> %s" % (s,fd)
+    fd = fuzzydate.merge(date,time)
     return fd
 
 
